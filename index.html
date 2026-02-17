@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブラウザで動く完全日本語ボクセルゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui-layer">
+        <div id="crosshair">+</div>
+        <div id="menu">
+            <h1>Web Voxel Game</h1>
+            <p>画面をクリックしてゲームの世界に入ります</p>
+            <p class="controls-info">
+                【操作方法】<br>
+                [W][A][S][D] : 前後左右に移動<br>
+                [Space] : ジャンプ<br>
+                [左クリック] : ブロックを壊す<br>
+                [右クリック] : ブロックを置く<br>
+                [1][2][3] : 持つブロックの変更
+            </p>
+        </div>
+        <div id="hotbar">
+            <div class="slot active" id="slot-1" style="background-color: #55aa55;"></div>
+            <div class="slot" id="slot-2" style="background-color: #8b5a2b;"></div>
+            <div class="slot" id="slot-3" style="background-color: #888888;"></div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "simplex-noise": "https://unpkg.com/simplex-noise@4.0.1/dist/esm/simplex-noise.js"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
